@@ -1,0 +1,50 @@
+
+// Module 8 - Exercise 1 - Merge Flowchart or Pseudocode - Chekesha Power
+
+start
+    Declarations
+        string geraldName, geraldAddress
+        string gerardName, gerardAddress
+        InputFile geraldFile
+        InputFile gerardFile
+        OutputFile mergedFile
+
+    housekeeping()
+    
+    while NOT EOF(geraldFile) AND NOT EOF(gerardFile)
+        if geraldName < gerardName then
+            output geraldName, geraldAddress to mergedFile
+            input geraldName, geraldAddress from geraldFile
+        else
+            output gerardName, gerardAddress to mergedFile
+            input gerardName, gerardAddress from gerardFile
+        endif
+    endwhile
+
+    // Handle any remaining records in either file
+    while NOT EOF(geraldFile)
+        output geraldName, geraldAddress to mergedFile
+        input geraldName, geraldAddress from geraldFile
+    endwhile
+
+    while NOT EOF(gerardFile)
+        output gerardName, gerardAddress to mergedFile
+        input gerardName, gerardAddress from gerardFile
+    endwhile
+
+    closeFiles()
+stop
+
+housekeeping()
+    open geraldFile "Geralds Businesses.csv"
+    open gerardFile "Geraldines Businesses.csv"
+    open mergedFile "MergedCustomers.csv"
+    input geraldName, geraldAddress from geraldFile
+    input gerardName, gerardAddress from gerardFile
+return
+
+closeFiles()
+    close geraldFile
+    close gerardFile
+    close mergedFile
+return
